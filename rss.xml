@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Holiday Notes</title>
+    <link>https://realtorjonathanklein.github.io/holiday-2025/</link>
+    <description>
+      Seasonal notes, community stories, and thoughtful guides for friends, clients, and neighbors.
+    </description>
+    <language>en-us</language>
+
+    <item>
+      <title>The Meaning of Hanukkah</title>
+      <link>https://realtorjonathanklein.github.io/holiday-2025/</link>
+      <guid>https://realtorjonathanklein.github.io/holiday-2025/</guid>
+      <pubDate>Mon, 16 Dec 2025 00:00:00 GMT</pubDate>
+      <description>
+        A fun, warm guide to Hanukkah—its story, meaning, traditions, and why the Festival of Lights still matters today.
+      </description>
+    </item>
+  </channel>
+</rss>
