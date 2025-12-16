@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Holiday Notes</title>
     <link>https://realtorjonathanklein.github.io/holiday-2025/</link>
-    <description>
-      Seasonal notes, community stories, and thoughtful guides for friends, clients, and neighbors.
-    </description>
+    <description>Seasonal notes, community stories, and thoughtful guides for friends, clients, and neighbors.</description>
     <language>en-us</language>
 
     <item>
@@ -13,9 +11,14 @@
       <link>https://realtorjonathanklein.github.io/holiday-2025/</link>
       <guid>https://realtorjonathanklein.github.io/holiday-2025/</guid>
       <pubDate>Mon, 16 Dec 2025 00:00:00 GMT</pubDate>
+
       <description>
         A fun, warm guide to Hanukkah—its story, meaning, traditions, and why the Festival of Lights still matters today.
       </description>
+
+      <media:content
+        url="https://realtorjonathanklein.github.io/holiday-2025/images/menorah-2.png"
+        type="image/png" />
     </item>
   </channel>
 </rss>
