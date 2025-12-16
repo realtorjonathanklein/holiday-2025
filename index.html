@@ -1,1 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Meaning of Hanukkah | A Festival of Light & Resilience</title>
+  <meta name="description" content="A fun, warm guide to Hanukkah—its story, meaning, traditions, and how to celebrate the Festival of Lights today." />
 
+  <!-- Open Graph (helps previews when shared) -->
+  <meta property="og:title" content="The Meaning of Hanukkah" />
+  <meta property="og:description" content="A fun, warm guide to Hanukkah—story, meaning, traditions, and why it still matters." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="images/menorah-2.png" />
+
+  <style>
+    :root{
+      --bg: #0b1220;
+      --card: #0f1b33;
+      --text: #eef2ff;
+      --muted: rgba(238,242,255,.78);
+      --accent: #93c5fd;
+      --gold: #f7d47a;
+      --border: rgba(255,255,255,.12);
+      --shadow: 0 16px 40px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 980px;
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: radial-gradient(1200px 700px at 20% 0%, rgba(59,130,246,.35), transparent 55%),
+                  radial-gradient(900px 600px at 85% 10%, rgba(245,158,11,.20), transparent 55%),
+                  linear-gradient(180deg, #070b14 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 18px; }
+
+    /* Top bar */
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+      position: sticky; top:0; z-index: 50;
+      background: rgba(7, 11, 20, .55);
+    }
+    .brand{
+      display:flex; gap:10px; align-items:baseline;
+      font-weight: 650;
+      letter-spacing: .2px;
+    }
+    .brand small{
+      display:block;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: .3px;
+    }
+    .nav{
+      display:flex; gap:14px; align-items:center;
+      color: var(--muted);
+      font-size: .95rem;
+      white-space: nowrap;
+    }
+    .pill{
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.04);
+    }
+
+    /* Hero */
+    .hero{
+      padding: 34px 0 20px;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+    @media (max-width: 860px){
+      .heroGrid{ grid-template-columns: 1fr; }
+    }
+
+    .heroCard{
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+    .heroContent{
+      padding: 26px 22px;
+    }
+    .kicker{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      font-size: .95rem;
+      color: var(--muted);
+      letter-spacing: .3px;
+      margin-bottom: 10px;
+    }
+    .dot{
+      width: 8px; height: 8px; border-radius: 99px;
+      background: var(--gold);
+      box-shadow: 0 0 18px rgba(247,212,122,.55);
+    }
+    h1{
+      margin: 6px 0 6px;
+      font-size: clamp(2rem, 2.7vw, 2.6rem);
+      line-height: 1.15;
+      letter-spacing: .2px;
+    }
+
+    .author{
+      margin: 6px 0 10px;
+      color: rgba(238,242,255,.75);
+      font-size: .95rem;
+    }
+
+    .sub{
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin: 0 0 14px;
+      max-width: 62ch;
+    }
+    .meta{
+      display:flex; gap: 10px; flex-wrap: wrap;
+      color: var(--muted);
+      font-size: .95rem;
+      margin-top: 14px;
+    }
+    .meta span{
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      padding: 7px 10px;
+      border-radius: 999px;
+    }
+
+    .heroImage{
+      height: 100%;
+      display:flex;
+      flex-direction: column;
+    }
+    .heroImage img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display:block;
+    }
+    .caption{
+      padding: 12px 14px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .92rem;
+      background: rgba(255,255,255,.03);
+    }
+
+    /* Article */
+    .article{
+      margin: 18px 0 42px;
+    }
+    .card{
+      border: 1px solid var(--border);
+      background: rgba(15,27,51,.72);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .content{
+      padding: 26px 22px;
+    }
+
+    h2{
+      margin: 22px 0 10px;
+      font-size: 1.55rem;
+      letter-spacing: .2px;
+      color: #dbeafe;
+    }
+    p{ margin: 0 0 14px; }
+    ul{ margin: 0 0 14px; padding-left: 18px; color: var(--muted); }
+    li{ margin: 8px 0; }
+
+    .callout{
+      margin: 18px 0;
+      padding: 16px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(147,197,253,.35);
+      background: rgba(59,130,246,.12);
+    }
+    .callout strong{ color: #e0f2fe; }
+
+    .split{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 18px 0 8px;
+    }
+    @media (max-width: 860px){
+      .split{ grid-template-columns: 1fr; }
+    }
+
+    .imgCard{
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      background: rgba(255,255,255,.03);
+    }
+    .imgCard img{
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display:block;
+    }
+    .imgCard .caption{ border-top: 1px solid var(--border); }
+
+    footer{
+      border-top: 1px solid var(--border);
+      padding: 22px 0 34px;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    .footerGrid{
+      display:flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .tiny{
+      font-size: .9rem;
+      opacity: .92;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="wrap" style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
+      <div class="brand">
+        <div>Holiday Notes</div>
+        <small>community • gratitude • light</small>
+      </div>
+      <div class="nav">
+        <a class="pill" href="rss.xml">RSS</a>
+        <span class="pill">Happy Hanukkah 🕎</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="heroGrid">
+        <div class="heroCard">
+          <div class="heroContent">
+            <div class="kicker"><span class="dot"></span> A fun guide to the Festival of Lights</div>
+            <h1>The Meaning of Hanukkah</h1>
+            <p class="author">Written by <strong>Jonathan Klein</strong></p>
+            <p class="sub">
+              Hanukkah is more than candles and latkes (though… those are excellent).
+              It’s an eight-night celebration of resilience, identity, and the idea that even a small light can change a room.
+            </p>
+            <div class="meta">
+              <span>8 nights</span>
+              <span>1 growing flame</span>
+              <span>Big meaning</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="heroCard heroImage">
+          <img src="images/menorah-2.png" alt="Happy Hanukkah menorah graphic" />
+          <div class="caption">A candle-lit reminder: light is meant to be seen and shared.</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="article">
+    <div class="wrap">
+      <article class="card">
+        <div class="content">
+
+          <h2>So… what is Hanukkah?</h2>
+          <p>
+            Hanukkah (also spelled Chanukah) is a Jewish holiday celebrated for <strong>eight nights</strong>.
+            It’s often called the <strong>Festival of Lights</strong> because each night we add another candle to the menorah,
+            increasing the brightness day by day.
+          </p>
+          <p>
+            While it lands around the same season as other winter holidays, Hanukkah has its own distinct story and message:
+            <strong>keep your light — your values, your identity, your hope — even when it would be easier to dim it.</strong>
+          </p>
+
+          <h2>The story behind the lights</h2>
+          <p>
+            Over 2,000 years ago, the Jewish people lived under Greek-Syrian rule and faced pressure to abandon Jewish practice.
+            A small group known as the <strong>Maccabees</strong> resisted, fought back, and reclaimed the Temple in Jerusalem.
+          </p>
+          <p>
+            The word <em>Hanukkah</em> means <strong>“dedication”</strong>—referring to the rededication of the Temple after it was recovered.
+          </p>
+
+          <div class="callout">
+            <strong>The “oil miracle”:</strong> Tradition tells that there was only enough purified oil to keep the Temple’s menorah lit for one day,
+            yet it burned for <strong>eight</strong>—long enough to prepare more.
+          </div>
+
+          <h2>Why eight nights matters (even now)</h2>
+          <p>
+            Hanukkah’s core move is beautifully simple: <strong>add light</strong>.
+            Not “save it,” not “wait until things improve,” not “hide it until it’s safe.”
+            One candle becomes two, then three, and so on—until a whole room looks different.
+          </p>
+          <p>
+            It’s a reminder that <strong>small actions are not small</strong>. They stack. They spread. They invite others in.
+          </p>
+
+          <div class="split">
+            <div>
+              <h2>Traditions you’ll see (and smell)</h2>
+              <ul>
+                <li><strong>Lighting the menorah:</strong> one more candle each night, plus the <em>shamash</em> (helper candle)</li>
+                <li><strong>Dreidel:</strong> a spinning-top game that carries echoes of perseverance</li>
+                <li><strong>Gelt:</strong> chocolate coins (kids: delighted; adults: also delighted)</li>
+                <li><strong>Songs + blessings:</strong> joy you can actually hear</li>
+              </ul>
+            </div>
+
+            <div class="imgCard">
+              <img src="images/latkes.jpg" alt="Crispy latkes with sour cream and chives" />
+              <div class="caption">Latkes: fried-in-oil deliciousness that ties directly to the Hanukkah story.</div>
+            </div>
+          </div>
+
+          <h2>Why the food is fried</h2>
+          <p>
+            You’ll notice a theme: oil. Latkes. Sufganiyot (jelly doughnuts). Crisp, golden things appearing in kitchens everywhere.
+            That’s because the holiday’s story centers around oil lasting longer than it should have.
+          </p>
+          <p>
+            In other words: it’s not just dinner—it’s storytelling you can dip in sour cream.
+          </p>
+
+          <h2>A note on community (and why I love this season)</h2>
+          <p>
+            Holidays have a way of making people feel both connected <em>and</em> reflective.
+            Hanukkah’s invitation is gentle but strong: <strong>bring light into your home, then let it spill outward.</strong>
+          </p>
+          <p>
+            Whether that looks like checking in on a neighbor, hosting friends, giving to a cause, or simply being more present—Hanukkah reminds us
+            that brightness multiplies when it’s shared.
+          </p>
+
+          <div class="callout">
+            <strong>Simple takeaway:</strong> Start with one light—one kind act, one call, one invitation, one moment of gratitude—then add another tomorrow.
+          </div>
+
+          <p style="margin-top:18px; color: var(--muted); font-size:.98rem;">
+            Wishing you a warm, meaningful Hanukkah—full of good food, good company, and light that lasts.
+          </p>
+
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footerGrid">
+        <div>
+          <div><strong>Happy Hanukkah</strong> 🕎</div>
+          <div class="tiny">May your home be filled with warmth, light, and togetherness.</div>
+        </div>
+        <div class="tiny">
+          Subscribe via <a href="rss.xml">RSS</a> •
+          Live site: <a href="https://realtorjonathanklein.github.io/holiday-2025/">realtorjonathanklein.github.io/holiday-2025</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
